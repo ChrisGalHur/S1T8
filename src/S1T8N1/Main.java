@@ -95,7 +95,7 @@ public class Main{
 		numCadenes.sort(Comparator.comparing(String::length));
 //		List<String> senseNum = numCadenes.stream()
 //				.filter(sin -> (integer)sin / sin == 0)
-//				.collect(Collectors.toList());
+//	/			.collect(Collectors.toList());
 		numCadenes.forEach(System.out::println);
 		
 		/*- Exercici 7
