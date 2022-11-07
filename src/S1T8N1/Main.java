@@ -93,9 +93,7 @@ public class Main{
 		System.out.println("\n"
 				+ "Cadenes ordenades:");
 		numCadenes.sort(Comparator.comparing(String::length));
-//		List<String> senseNum = numCadenes.stream()
-//				.filter(sin -> (integer)sin / sin == 0)
-//	/			.collect(Collectors.toList());
+
 		numCadenes.forEach(System.out::println);
 		
 		/*- Exercici 7
@@ -112,8 +110,10 @@ public class Main{
 		injecta a la interfície creada mitjançant una lambda, el cos del mètode, de manera que torni la mateixa cadena que rep com a paràmetre
 		però al revés. Invoca la instància de la interfície passant-li una cadena i comprova si el resultat és correcte.*/
 		
-		Reves paraula = (s = "Dolor de cabeza") -> {return s.reversed();};
-		System.out.println(paraula.reverse(null));
+//		FunctionalInterficies paraula = (paraulaGira) -> new StringBuilder(paraulaGira).reverse().toString();
+		Reves paraula = (paraulaDelReves) -> new StringBuilder(paraulaDelReves).reverse().toString();
+		System.out.println("\nString al reves:");
+		System.out.println(paraula.reverse("Dolor de cabeza"));
 	}
 	
 }
